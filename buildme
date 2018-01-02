@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# Build the Docker images.
+
+docker build -t coticeadifrn/moodle:3.4.0 .
+
