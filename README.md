@@ -9,6 +9,9 @@ cd moodle_docker_compose/
 git submodule update --init
 cd apps/ava
 git checkout MOODLE_35_STABLE
+cd ../../bin
+./deploy
+./ava_up
 ``` 
 
 
