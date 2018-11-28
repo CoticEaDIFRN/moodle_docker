@@ -15,9 +15,17 @@ echo_info "Subir o banco"
 ./db_wait
 
 echo_info "Instalar o Moodle"
-./ava_run php admin/cli/install_database.php --agree-license
+./ava_run php \
+          admin/cli/install_database.php \
+          --agree-license \
+          --lang=DEPLOY_LANG \
+          --adminuser=$DEPLOY_ADMIN_USER \
+          --adminpass=$DEPLOY_ADMIN_PASS \
+          --adminemail=$DEPLOY_ADMIN_MAIL \
+          --fullname=$DEPLOY_FULLNAME \
+          --shortname=$DEPLOY_SHORTNAME
 
 echo_info "Parar o mundo novamente"
 ./down
 
-echo_success "Tudo pronto. Não esqueça de fazer um ./up se quiser ver a aplicação"
+echo_success "Tudo pronto. Não esqueça de fazer um ./ava_up se quiser ver a aplicação"

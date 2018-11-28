@@ -2,10 +2,13 @@ version: "3"
 
 services:
 
+  mailhog:
+    image: mailhog/mailhog
+
   db:
     image: mariadb:10.4
     volumes:
-      - "${MOODLE_DOCKER_MYSQL_DATA}:/var/lib/mysql"
+      - "${MOODLE_DOCKER_DBDIR}:/var/lib/mysql"
     environment:
       MYSQL_DATABASE: ${MOODLE_DOCKER_DBNAME}
       MYSQL_USER: ${MOODLE_DOCKER_DBUSER}
@@ -23,19 +26,15 @@ services:
     env_file:
       - .env
     ports:
-      - "${MOODLE_DOCKER_AVA_PORT}:80"
+      - "${MOODLE_DOCKER_APACHE_PORT}:80"
   #   depends_on:
   #     - mailhog
 
-  # mailhog:
-  #   image: mailhog/mailhog
-
-  # memcached0:
-  #   image: memcached:1.4
-  # memcached1:
+  # memcached:
   #   image: memcached:1.4
   # redis:
   #   image: redis:3
+
   # solr:
   #   image: solr:6.5
   #   entrypoint:
