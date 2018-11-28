@@ -3,9 +3,7 @@
 
 ## Instalação
 
-Como root (ou sudo, à tua escolha).
-```
-cd /container
+```shell
 git clone git@github.com:CoticEaDIFRN/moodle_docker_compose.git
 cd moodle_docker_compose/
 git submodule update --init
@@ -16,4 +14,4 @@ git checkout MOODLE_35_STABLE
 
 ## Acesso
 
-https://domainname/ava/
+https://domain_name/ava/
