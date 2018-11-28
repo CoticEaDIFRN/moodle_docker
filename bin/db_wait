@@ -1,0 +1,11 @@
+#!/bin/bash
+source color_logs
+
+echo_info "Aguardando a base de dados..."
+
+while ! docker-compose exec db mysqladmin  -u $MOODLE_DOCKER_DBUSER --password=$MOODLE_DOCKER_DBPASS ping -h"$MOODLE_DOCKER_DBHOST" --silent; do
+    echo_warning "MySQL is unavailable - sleeping"; 
+    sleep 1
+done
+
+echo_success "Connectado com sucesso"

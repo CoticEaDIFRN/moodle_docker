@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  db:
+    image: mariadb:10.4
+    volumes:
+      - "${MOODLE_DOCKER_MYSQL_DATA}:/var/lib/mysql"
+    environment:
+      MYSQL_DATABASE: ${MOODLE_DOCKER_DBNAME}
+      MYSQL_USER: ${MOODLE_DOCKER_DBUSER}
+      MYSQL_ROOT_PASSWORD: ${MOODLE_DOCKER_DBPASS}
+      MYSQL_PASSWORD: ${MOODLE_DOCKER_DBPASS}
