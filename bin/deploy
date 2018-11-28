@@ -1,0 +1,23 @@
+#!/bin/bash
+
+source color_logs
+
+echo_info $COMPOSE_PROJECT_NAME
+
+echo_info "Parar o mundo"
+./down
+
+# echo_info "Construir o mundo"
+# ./build
+
+echo_info "Subir o banco"
+./db_up
+./db_wait
+
+echo_info "Instalar o Moodle"
+./ava_run php admin/cli/install_database.php --agree-license
+
+echo_info "Parar o mundo novamente"
+./down
+
+echo_success "Tudo pronto. Não esqueça de fazer um ./up se quiser ver a aplicação"

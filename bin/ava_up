@@ -1,0 +1,8 @@
+#!/bin/bash
+source color_logs
+
+# source env.sh
+./db_up
+./db_wait
+
+docker-compose up ava

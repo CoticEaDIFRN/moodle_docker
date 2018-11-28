@@ -1,0 +1,10 @@
+#!/bin/bash
+source color_logs
+
+source .env
+
+./down
+
+rm -rf ../volumes
+
+# rm -f .env
