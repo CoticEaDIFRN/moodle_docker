@@ -6,3 +6,4 @@ source color_logs
 ./db_wait
 
 docker-compose up ava
+docker-compose exec -ti ava chown -R www-data:www-data /var/www/moodledata/
