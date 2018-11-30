@@ -5,6 +5,6 @@ source .env
 
 ./down
 
-rm -rf ../volumes
+sudo rm -rf ../volumes
 
 # rm -f .env
