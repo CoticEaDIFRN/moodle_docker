@@ -29,3 +29,5 @@ echo_info "Parar o mundo novamente"
 ./down
 
 echo_success "Tudo pronto. Não esqueça de fazer um ./ava_up se quiser ver a aplicação"
+
+sudo chown -R www-data:www-data ../volumes/moodledata/
