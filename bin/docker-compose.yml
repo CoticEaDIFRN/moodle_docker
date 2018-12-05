@@ -22,6 +22,7 @@ services:
       - "${MOODLE_DOCKER_AVA_WWWROOT}:/var/www/html/ava"
       - "${MOODLE_DOCKER_AVA_DATA}:/var/www/moodledata"
       - "${MOODLE_DOCKER_AVA_CONFIG}:/var/www/html/ava/config.php"
+      - "../apps/theme_ledor:/var/www/html/ava/theme/ledor"
     working_dir: /var/www/html/ava/
     env_file:
       - .env
