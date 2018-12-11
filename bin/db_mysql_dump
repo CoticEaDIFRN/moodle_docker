@@ -4,4 +4,9 @@ source color_logs
 
 ./db_wait
 
+echo_info "Efetuando DUMP em $1, no banco de dados $MOODLE_DOCKER_DBNAME"
+echo_warning "Isso pode demorar, melhor ir tomar um café..."
+
 cat backup.sql | docker exec -i $1 mysql -u $MOODLE_DOCKER_DBUSER -p$MOODLE_DOCKER_DBPASS $MOODLE_DOCKER_DBNAME
+
+echo_success "DUMP finalizado"

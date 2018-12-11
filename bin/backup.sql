@@ -1610,7 +1610,7 @@ CREATE TABLE `mdl_cache_flags` (
 
 LOCK TABLES `mdl_cache_flags` WRITE;
 /*!40000 ALTER TABLE `mdl_cache_flags` DISABLE KEYS */;
-INSERT INTO `mdl_cache_flags` VALUES (1,'userpreferenceschanged','2',1544462727,'1',1544469927),(2,'userpreferenceschanged','3',1544462692,'1',1544469892);
+INSERT INTO `mdl_cache_flags` VALUES (1,'userpreferenceschanged','2',1544538591,'1',1544545791),(2,'userpreferenceschanged','3',1544462692,'1',1544469892);
 /*!40000 ALTER TABLE `mdl_cache_flags` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4058,7 +4058,7 @@ CREATE TABLE `mdl_external_tokens` (
   KEY `mdl_extetoke_ext_ix` (`externalserviceid`),
   KEY `mdl_extetoke_con_ix` (`contextid`),
   KEY `mdl_extetoke_cre_ix` (`creatorid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=COMPRESSED COMMENT='Security tokens for accessing of external services';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=COMPRESSED COMMENT='Security tokens for accessing of external services';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4067,6 +4067,7 @@ CREATE TABLE `mdl_external_tokens` (
 
 LOCK TABLES `mdl_external_tokens` WRITE;
 /*!40000 ALTER TABLE `mdl_external_tokens` DISABLE KEYS */;
+INSERT INTO `mdl_external_tokens` VALUES (1,'fd7c846903e4ea09ec49524b315daea7',NULL,0,3,2,NULL,1,2,NULL,0,1544544418,NULL);
 /*!40000 ALTER TABLE `mdl_external_tokens` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6466,7 +6467,7 @@ CREATE TABLE `mdl_logstore_standard_log` (
   KEY `mdl_logsstanlog_couanotim_ix` (`courseid`,`anonymous`,`timecreated`),
   KEY `mdl_logsstanlog_useconconcr_ix` (`userid`,`contextlevel`,`contextinstanceid`,`crud`,`edulevel`,`timecreated`),
   KEY `mdl_logsstanlog_con_ix` (`contextid`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=COMPRESSED COMMENT='Standard log table';
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=COMPRESSED COMMENT='Standard log table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6475,7 +6476,7 @@ CREATE TABLE `mdl_logstore_standard_log` (
 
 LOCK TABLES `mdl_logstore_standard_log` WRITE;
 /*!40000 ALTER TABLE `mdl_logstore_standard_log` DISABLE KEYS */;
-INSERT INTO `mdl_logstore_standard_log` VALUES (1,'\\core\\event\\course_viewed','core','viewed','course',NULL,NULL,'r',2,2,50,1,0,1,NULL,0,'N;',1543610525,'web','192.168.128.1',NULL),(2,'\\core\\event\\user_loggedin','core','loggedin','user','user',2,'r',0,1,10,0,2,0,NULL,0,'a:1:{s:8:\"username\";s:5:\"admin\";}',1543610553,'web','192.168.128.1',NULL),(3,'\\core\\event\\dashboard_viewed','core','viewed','dashboard',NULL,NULL,'r',0,5,30,2,2,0,2,0,'N;',1543610563,'web','192.168.128.1',NULL),(4,'\\core\\event\\course_viewed','core','viewed','course',NULL,NULL,'r',2,2,50,1,0,1,NULL,0,'N;',1544205188,'web','172.18.0.1',NULL),(5,'\\core\\event\\course_viewed','core','viewed','course',NULL,NULL,'r',2,2,50,1,0,1,NULL,0,'N;',1544205331,'web','172.18.0.1',NULL),(6,'\\core\\event\\user_login_failed','core','failed','user_login',NULL,NULL,'r',0,1,10,0,0,0,NULL,0,'a:2:{s:8:\"username\";s:8:\"ava_user\";s:6:\"reason\";i:1;}',1544460715,'web','172.18.0.1',NULL),(7,'\\core\\event\\user_login_failed','core','failed','user_login',NULL,NULL,'r',0,1,10,0,0,0,NULL,0,'a:2:{s:8:\"username\";s:8:\"ava_user\";s:6:\"reason\";i:1;}',1544460728,'web','172.18.0.1',NULL),(8,'\\core\\event\\user_loggedin','core','loggedin','user','user',2,'r',0,1,10,0,2,0,NULL,0,'a:1:{s:8:\"username\";s:5:\"admin\";}',1544460734,'web','172.18.0.1',NULL),(9,'\\core\\event\\dashboard_viewed','core','viewed','dashboard',NULL,NULL,'r',0,5,30,2,2,0,2,0,'N;',1544460742,'web','172.18.0.1',NULL),(10,'\\tool_langimport\\event\\langpack_imported','tool_langimport','imported','langpack',NULL,NULL,'c',0,1,10,0,2,0,NULL,0,'a:1:{s:8:\"langcode\";s:5:\"pt_br\";}',1544461990,'web','172.18.0.1',NULL),(11,'\\core\\event\\config_log_created','core','created','config_log','config_log',1603,'c',0,1,10,0,2,0,NULL,0,'a:4:{s:4:\"name\";s:4:\"lang\";s:8:\"oldvalue\";s:2:\"en\";s:5:\"value\";s:5:\"pt_br\";s:6:\"plugin\";N;}',1544462015,'web','172.18.0.1',NULL),(12,'\\core\\event\\config_log_created','core','created','config_log','config_log',1604,'c',0,1,10,0,2,0,NULL,0,'a:4:{s:4:\"name\";s:17:\"enablewebservices\";s:8:\"oldvalue\";s:1:\"0\";s:5:\"value\";s:1:\"1\";s:6:\"plugin\";N;}',1544462331,'web','172.18.0.1',NULL),(13,'\\core\\event\\config_log_created','core','created','config_log','config_log',1605,'c',0,1,10,0,2,0,NULL,0,'a:4:{s:4:\"name\";s:21:\"enablewsdocumentation\";s:8:\"oldvalue\";s:1:\"0\";s:5:\"value\";s:1:\"1\";s:6:\"plugin\";N;}',1544462399,'web','172.18.0.1',NULL),(14,'\\core\\event\\user_created','core','created','user','user',3,'c',0,21,30,3,2,0,3,0,'N;',1544462692,'web','172.18.0.1',NULL),(15,'\\core\\event\\webservice_service_created','core','created','webservice_service','external_services',2,'c',0,1,10,0,2,0,NULL,0,'N;',1544462810,'web','172.18.0.1',NULL),(16,'\\core\\event\\webservice_service_user_added','core','added','webservice_service_user','external_services',2,'c',0,1,10,0,2,0,3,0,'N;',1544463536,'web','172.18.0.1',NULL);
+INSERT INTO `mdl_logstore_standard_log` VALUES (1,'\\core\\event\\course_viewed','core','viewed','course',NULL,NULL,'r',2,2,50,1,0,1,NULL,0,'N;',1543610525,'web','192.168.128.1',NULL),(2,'\\core\\event\\user_loggedin','core','loggedin','user','user',2,'r',0,1,10,0,2,0,NULL,0,'a:1:{s:8:\"username\";s:5:\"admin\";}',1543610553,'web','192.168.128.1',NULL),(3,'\\core\\event\\dashboard_viewed','core','viewed','dashboard',NULL,NULL,'r',0,5,30,2,2,0,2,0,'N;',1543610563,'web','192.168.128.1',NULL),(4,'\\core\\event\\course_viewed','core','viewed','course',NULL,NULL,'r',2,2,50,1,0,1,NULL,0,'N;',1544205188,'web','172.18.0.1',NULL),(5,'\\core\\event\\course_viewed','core','viewed','course',NULL,NULL,'r',2,2,50,1,0,1,NULL,0,'N;',1544205331,'web','172.18.0.1',NULL),(6,'\\core\\event\\user_login_failed','core','failed','user_login',NULL,NULL,'r',0,1,10,0,0,0,NULL,0,'a:2:{s:8:\"username\";s:8:\"ava_user\";s:6:\"reason\";i:1;}',1544460715,'web','172.18.0.1',NULL),(7,'\\core\\event\\user_login_failed','core','failed','user_login',NULL,NULL,'r',0,1,10,0,0,0,NULL,0,'a:2:{s:8:\"username\";s:8:\"ava_user\";s:6:\"reason\";i:1;}',1544460728,'web','172.18.0.1',NULL),(8,'\\core\\event\\user_loggedin','core','loggedin','user','user',2,'r',0,1,10,0,2,0,NULL,0,'a:1:{s:8:\"username\";s:5:\"admin\";}',1544460734,'web','172.18.0.1',NULL),(9,'\\core\\event\\dashboard_viewed','core','viewed','dashboard',NULL,NULL,'r',0,5,30,2,2,0,2,0,'N;',1544460742,'web','172.18.0.1',NULL),(10,'\\tool_langimport\\event\\langpack_imported','tool_langimport','imported','langpack',NULL,NULL,'c',0,1,10,0,2,0,NULL,0,'a:1:{s:8:\"langcode\";s:5:\"pt_br\";}',1544461990,'web','172.18.0.1',NULL),(11,'\\core\\event\\config_log_created','core','created','config_log','config_log',1603,'c',0,1,10,0,2,0,NULL,0,'a:4:{s:4:\"name\";s:4:\"lang\";s:8:\"oldvalue\";s:2:\"en\";s:5:\"value\";s:5:\"pt_br\";s:6:\"plugin\";N;}',1544462015,'web','172.18.0.1',NULL),(12,'\\core\\event\\config_log_created','core','created','config_log','config_log',1604,'c',0,1,10,0,2,0,NULL,0,'a:4:{s:4:\"name\";s:17:\"enablewebservices\";s:8:\"oldvalue\";s:1:\"0\";s:5:\"value\";s:1:\"1\";s:6:\"plugin\";N;}',1544462331,'web','172.18.0.1',NULL),(13,'\\core\\event\\config_log_created','core','created','config_log','config_log',1605,'c',0,1,10,0,2,0,NULL,0,'a:4:{s:4:\"name\";s:21:\"enablewsdocumentation\";s:8:\"oldvalue\";s:1:\"0\";s:5:\"value\";s:1:\"1\";s:6:\"plugin\";N;}',1544462399,'web','172.18.0.1',NULL),(14,'\\core\\event\\user_created','core','created','user','user',3,'c',0,21,30,3,2,0,3,0,'N;',1544462692,'web','172.18.0.1',NULL),(15,'\\core\\event\\webservice_service_created','core','created','webservice_service','external_services',2,'c',0,1,10,0,2,0,NULL,0,'N;',1544462810,'web','172.18.0.1',NULL),(16,'\\core\\event\\webservice_service_user_added','core','added','webservice_service_user','external_services',2,'c',0,1,10,0,2,0,3,0,'N;',1544463536,'web','172.18.0.1',NULL),(17,'\\core\\event\\user_loggedin','core','loggedin','user','user',2,'r',0,1,10,0,2,0,NULL,0,'a:1:{s:8:\"username\";s:5:\"admin\";}',1544538552,'web','172.23.0.1',NULL),(18,'\\core\\event\\dashboard_viewed','core','viewed','dashboard',NULL,NULL,'r',0,5,30,2,2,0,2,0,'N;',1544543268,'web','172.23.0.1',NULL),(19,'\\core\\event\\user_profile_viewed','core','viewed','user_profile','user',3,'r',0,21,30,3,2,0,3,0,'N;',1544544455,'web','172.23.0.1',NULL),(20,'\\core\\event\\user_profile_viewed','core','viewed','user_profile','user',3,'r',0,21,30,3,2,0,3,0,'N;',1544544462,'web','172.23.0.1',NULL),(21,'\\core\\event\\user_list_viewed','core','viewed','user_list','course',1,'r',0,2,50,1,2,1,NULL,0,'a:2:{s:15:\"courseshortname\";s:3:\"AVA\";s:14:\"coursefullname\";s:8:\"Ambiente\";}',1544544466,'web','172.23.0.1',NULL);
 /*!40000 ALTER TABLE `mdl_logstore_standard_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7590,7 +7591,7 @@ CREATE TABLE `mdl_my_pages` (
   `sortorder` mediumint(6) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `mdl_mypage_usepri_ix` (`userid`,`private`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=COMPRESSED COMMENT='Extra user pages for the My Moodle system';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=COMPRESSED COMMENT='Extra user pages for the My Moodle system';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -7599,7 +7600,7 @@ CREATE TABLE `mdl_my_pages` (
 
 LOCK TABLES `mdl_my_pages` WRITE;
 /*!40000 ALTER TABLE `mdl_my_pages` DISABLE KEYS */;
-INSERT INTO `mdl_my_pages` VALUES (1,NULL,'__default',0,0),(2,NULL,'__default',1,0),(3,2,'__default',1,0);
+INSERT INTO `mdl_my_pages` VALUES (1,NULL,'__default',0,0),(2,NULL,'__default',1,0),(3,2,'__default',1,0),(4,3,'__default',0,0);
 /*!40000 ALTER TABLE `mdl_my_pages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10566,7 +10567,7 @@ CREATE TABLE `mdl_sessions` (
   KEY `mdl_sess_tim_ix` (`timecreated`),
   KEY `mdl_sess_tim2_ix` (`timemodified`),
   KEY `mdl_sess_use_ix` (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=COMPRESSED COMMENT='Database based session storage - now recommended';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=COMPRESSED COMMENT='Database based session storage - now recommended';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -10575,7 +10576,7 @@ CREATE TABLE `mdl_sessions` (
 
 LOCK TABLES `mdl_sessions` WRITE;
 /*!40000 ALTER TABLE `mdl_sessions` DISABLE KEYS */;
-INSERT INTO `mdl_sessions` VALUES (4,0,'d5c649069db263f74aff2e72064495da',2,NULL,1544460733,1544463541,'172.18.0.1','172.18.0.1');
+INSERT INTO `mdl_sessions` VALUES (4,0,'d5c649069db263f74aff2e72064495da',2,NULL,1544460733,1544463541,'172.18.0.1','172.18.0.1'),(6,0,'5794257653f1fd0c24730348256535c2',2,NULL,1544538552,1544544465,'172.23.0.1','172.23.0.1');
 /*!40000 ALTER TABLE `mdl_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -12002,7 +12003,7 @@ CREATE TABLE `mdl_user` (
 
 LOCK TABLES `mdl_user` WRITE;
 /*!40000 ALTER TABLE `mdl_user` DISABLE KEYS */;
-INSERT INTO `mdl_user` VALUES (1,'manual',1,0,0,0,1,'guest','$2y$10$OB.mvCqgYGsI2JcbaZHxHuC9dDxmyz8njXNKVNjZhKnPuEhCJi.jm','','Guest user',' ','root@localhost',0,'','','','','','','','','','','','','en','gregorian','','99',0,0,0,0,'','',0,'','This user is a special user that allows read-only access to some courses.',1,1,0,2,1,0,0,1543609693,0,NULL,NULL,NULL,NULL,NULL),(2,'manual',1,0,0,0,1,'admin','$2y$10$mz5/ji..8QvtZ6YDw6vtou72sIMOajp0FDD5tpZ41lQDxI9aNH5DO','','Admin','User','admin@admin.com',0,'','','','','','','','','','','','','en','gregorian','','99',1543610553,1544463519,1543610553,1544460733,'172.18.0.1','',0,'',NULL,1,1,0,1,1,0,0,1543609693,0,NULL,NULL,NULL,NULL,NULL),(3,'manual',1,0,0,0,1,'api','$2y$10$IEP7bocwvvhF.Q1PyFwtFu7olh.ZsHtK7bG42rZCnqbaUVnnGZ.z2','','api','moodle','apimoodle@moodle.com',0,'','','','','','','','','','','','','pt_br','gregorian','','99',0,0,0,0,'','',0,'','',1,1,0,2,1,0,1544462690,1544462690,0,'','','','','');
+INSERT INTO `mdl_user` VALUES (1,'manual',1,0,0,0,1,'guest','$2y$10$OB.mvCqgYGsI2JcbaZHxHuC9dDxmyz8njXNKVNjZhKnPuEhCJi.jm','','Guest user',' ','root@localhost',0,'','','','','','','','','','','','','en','gregorian','','99',0,0,0,0,'','',0,'','This user is a special user that allows read-only access to some courses.',1,1,0,2,1,0,0,1543609693,0,NULL,NULL,NULL,NULL,NULL),(2,'manual',1,0,0,0,1,'admin','$2y$10$mz5/ji..8QvtZ6YDw6vtou72sIMOajp0FDD5tpZ41lQDxI9aNH5DO','','Admin','User','admin@admin.com',0,'','','','','','','','','','','','','en','gregorian','','99',1543610553,1544544436,1544460733,1544538552,'172.23.0.1','',0,'',NULL,1,1,0,1,1,0,0,1543609693,0,NULL,NULL,NULL,NULL,NULL),(3,'manual',1,0,0,0,1,'api','$2y$10$IEP7bocwvvhF.Q1PyFwtFu7olh.ZsHtK7bG42rZCnqbaUVnnGZ.z2','','api','moodle','apimoodle@moodle.com',0,'','','','','','','','','','','','','pt_br','gregorian','','99',0,0,0,0,'','',0,'','',1,1,0,2,1,0,1544462690,1544462690,0,'','','','','');
 /*!40000 ALTER TABLE `mdl_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -12262,7 +12263,7 @@ CREATE TABLE `mdl_user_preferences` (
   `value` varchar(1333) COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `mdl_userpref_usenam_uix` (`userid`,`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=COMPRESSED COMMENT='Allows modules to store arbitrary user preferences';
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=COMPRESSED COMMENT='Allows modules to store arbitrary user preferences';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -12271,7 +12272,7 @@ CREATE TABLE `mdl_user_preferences` (
 
 LOCK TABLES `mdl_user_preferences` WRITE;
 /*!40000 ALTER TABLE `mdl_user_preferences` DISABLE KEYS */;
-INSERT INTO `mdl_user_preferences` VALUES (1,2,'core_message_migrate_data','1'),(2,3,'auth_forcepasswordchange','0'),(3,3,'email_bounce_count','1'),(4,3,'email_send_count','1'),(5,2,'userselector_preserveselected','0'),(6,2,'userselector_autoselectunique','0'),(7,2,'userselector_searchanywhere','0');
+INSERT INTO `mdl_user_preferences` VALUES (1,2,'core_message_migrate_data','1'),(2,3,'auth_forcepasswordchange','0'),(3,3,'email_bounce_count','1'),(4,3,'email_send_count','1'),(5,2,'userselector_preserveselected','0'),(6,2,'userselector_autoselectunique','0'),(7,2,'userselector_searchanywhere','0'),(8,2,'drawer-open-nav','true');
 /*!40000 ALTER TABLE `mdl_user_preferences` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -12966,4 +12967,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-10 18:26:50
+-- Dump completed on 2018-12-11 16:08:30
