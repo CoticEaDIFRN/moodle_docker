@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source color_logs
+
+./db_wait
+
+cat backup.sql | docker exec -i $1 mysql -u $MOODLE_DOCKER_DBUSER -p$MOODLE_DOCKER_DBPASS $MOODLE_DOCKER_DBNAME

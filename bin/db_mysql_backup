@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source color_logs
+
+./db_wait
+
+docker-compose exec db mysqldump -u $MOODLE_DOCKER_DBUSER -p$MOODLE_DOCKER_DBPASS $MOODLE_DOCKER_DBNAME > backup.sql
