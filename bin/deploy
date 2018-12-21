@@ -14,7 +14,7 @@ echo_info "Subir o banco"
 ./db_up
 ./db_wait
 
-echo_info "Instalar o Moodle"
+echo_info "Instalar o Moodle AVA"
 ./ava_run php \
           admin/cli/install_database.php \
           --agree-license \
@@ -25,9 +25,20 @@ echo_info "Instalar o Moodle"
           --fullname=$DEPLOY_FULLNAME \
           --shortname=$DEPLOY_SHORTNAME
 
+echo_info "Instalar o Moodle DEV"
+./dev_run php \
+          admin/cli/install_database.php \
+          --agree-license \
+          --lang=DEPLOY_LANG \
+          --adminuser=$DEPLOY_ADMIN_USER \
+          --adminpass=$DEPLOY_ADMIN_PASS \
+          --adminemail=$DEPLOY_ADMIN_MAIL \
+          --fullname=DEV $DEPLOY_FULLNAME \
+          --shortname=DEV $DEPLOY_SHORTNAME
+
 echo_info "Parar o mundo novamente"
 ./down
 
 echo_success "Tudo pronto. Não esqueça de fazer um ./ava_up se quiser ver a aplicação"
 
-sudo chown -R www-data:www-data ../volumes/moodledata/
+sudo chown -R www-data:www-data ../volumes/moodledatadev/

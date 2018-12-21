@@ -1,0 +1,9 @@
+#!/bin/bash
+source color_logs
+
+# source env.sh
+./db_up
+./db_wait
+
+docker-compose up dev
+# docker-compose exec -ti ava chown -R www-data:www-data /var/www/moodledata/

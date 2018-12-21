@@ -14,11 +14,11 @@ $CFG->dbhost    = _env('MOODLE_DOCKER_DBHOST', 'db');
 $CFG->dbname    = _env('MOODLE_DOCKER_DBNAME', 'ava_base');
 $CFG->dbuser    = _env('MOODLE_DOCKER_DBUSER', 'ava_user');
 $CFG->dbpass    = _env('MOODLE_DOCKER_DBPASS', 'ava_pass');
-$CFG->prefix    = 'mdl_';
+$CFG->prefix    = 'dev_';
 $CFG->dboptions = ['dbcollation' => _env('MOODLE_DOCKER_DBCOLLATION')];
 
-$CFG->wwwroot   = _env('MOODLE_DOCKER_AVA_HOST', 'http://localhost/ava');
-$CFG->dataroot  = _env('MOODLE_DOCKER_AVA_DATA', '/var/www/moodledata');
+$CFG->wwwroot   = _env('MOODLE_DOCKER_DEV_HOST', 'http://localhost/dev');
+$CFG->dataroot  = _env('MOODLE_DOCKER_DEV_DATA', '/var/www/moodledatadev');
 $CFG->admin     = 'admin';
 $CFG->directorypermissions = 0777;
 $CFG->smtphosts = 'mailhog:1025';

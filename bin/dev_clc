@@ -1,0 +1,6 @@
+#!/bin/bash
+source color_logs
+
+
+./dev_exec php admin/cli/purge_caches.php
+
