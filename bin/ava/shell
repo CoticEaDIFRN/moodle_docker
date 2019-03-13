@@ -1,5 +1,5 @@
 #!/bin/bash
 source color_logs
 
-docker-compose run --rm ava $@
+./$SERVICE_NAME/exec bash
 

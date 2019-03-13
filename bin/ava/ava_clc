@@ -1,6 +1,0 @@
-#!/bin/bash
-source color_logs
-
-
-./ava_exec php admin/cli/purge_caches.php
-

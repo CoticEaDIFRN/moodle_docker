@@ -2,8 +2,7 @@
 source color_logs
 
 # source env.sh
-./db_up
-./db_wait
+./db/up
 
-docker-compose up ava
+docker-compose up $SERVICE_NAME
 # docker-compose exec -ti ava chown -R www-data:www-data /var/www/moodledata/
