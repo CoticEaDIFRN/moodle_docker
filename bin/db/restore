@@ -1,0 +1,18 @@
+#!/bin/bash
+
+source color_logs
+
+./db/up
+
+echo_info "Se lembre que o arquivo backup.sql tem que estar no ${MOODLE_DOCKER_DBDIR}"
+read -p "Desejas continuar (y/N)? " -n 1 -r
+echo    # (optional) move to a new line
+
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo_info "Efetuando RESTORE em $1, no banco de dados $MOODLE_DOCKER_DBNAME"
+    echo_warning "Isso pode demorar, melhor ir tomar um café..."
+    docker-compose exec db bash -c 'mysql -u $MOODLE_DOCKER_DBUSER -p$MOODLE_DOCKER_DBPASS $MOODLE_DOCKER_DBNAME'
+
+    echo_success "RESTORE finalizado"
+fi

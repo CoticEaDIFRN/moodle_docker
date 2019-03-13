@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source color_logs
+
+./db/up
+./db/shell mysql -h $MOODLE_DOCKER_DBHOST -u $MOODLE_DOCKER_DBUSER --password=$MOODLE_DOCKER_DBPASS $MOODLE_DOCKER_DBNAME

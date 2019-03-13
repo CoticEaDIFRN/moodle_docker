@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source color_logs
+
+echo_info "Efetuando BACKUP em $1, no banco de dados $MOODLE_DOCKER_DBNAME"
+echo_warning "Isso pode demorar, melhor ir tomar um café..."
+
+docker-compose exec db bash -c 'echo mysqldump -u $MOODLE_DOCKER_DBUSER -p$MOODLE_DOCKER_DBPASS $MOODLE_DOCKER_DBNAME \> /var/lib/mysql/backup.sql'
+
+echo_success "BACKUP finalizado"
