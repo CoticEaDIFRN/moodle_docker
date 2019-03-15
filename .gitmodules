@@ -7,9 +7,6 @@
 [submodule "apps/ava"]
 	path = apps/ava
 	url = https://github.com/moodle/moodle.git
-[submodule "plugins/suap"]
-	path = plugins/mod_suap
-	url = git@github.com:CoticEaDIFRN/integrador_moodle_suap.git
 [submodule "plugins/auth_hashurl"]
 	path = plugins/auth_hashurl
 	url = git@github.com:CoticEaDIFRN/moodle_auth_hashurl.git
