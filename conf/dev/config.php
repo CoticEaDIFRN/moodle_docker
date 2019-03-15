@@ -18,7 +18,7 @@ $CFG->prefix    = 'dev_';
 $CFG->dboptions = ['dbcollation' => _env('MOODLE_DOCKER_DBCOLLATION')];
 
 $CFG->wwwroot   = _env('MOODLE_DOCKER_DEV_HOST', 'http://localhost/dev');
-$CFG->dataroot  = _env('MOODLE_DOCKER_DEV_DATA', '/var/www/moodledatadev');
+$CFG->dataroot  = '/var/moodledata';
 $CFG->admin     = 'admin';
 $CFG->directorypermissions = 0777;
 $CFG->smtphosts = 'mailhog:1025';

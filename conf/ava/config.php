@@ -18,7 +18,7 @@ $CFG->prefix    = 'mdl_';
 $CFG->dboptions = ['dbcollation' => _env('MOODLE_DOCKER_DBCOLLATION')];
 
 $CFG->wwwroot   = _env('MOODLE_DOCKER_AVA_HOST', 'http://localhost/ava');
-$CFG->dataroot  = _env('MOODLE_DOCKER_AVA_DATA', '/var/www/moodledata');
+$CFG->dataroot  = '/var/moodledata';
 $CFG->admin     = 'admin';
 $CFG->directorypermissions = 0777;
 $CFG->smtphosts = 'mailhog:1025';

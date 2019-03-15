@@ -5,6 +5,8 @@ RED_COLOR='\033[0;31m'
 BLUE_COLOR='\033[1;34m'
 NO_COLOR='\033[0m'
 
+SERVICE_NAME=$(basename $(dirname $0))
+
 pwd=$(pwd -P)
 
 if [[ ! -f "$pwd/.env" ]]; then

@@ -13,27 +13,27 @@ echo_info "Parar o mundo"
 echo_info "Subir o banco"
 ./db/up
 
-# echo_info "Instalar o Moodle AVA"
-# ./ava_run php \
-#           admin/cli/install_database.php \
-#           --agree-license \
-#           --lang=DEPLOY_LANG \
-#           --adminuser=$DEPLOY_ADMIN_USER \
-#           --adminpass=$DEPLOY_ADMIN_PASS \
-#           --adminemail=$DEPLOY_ADMIN_MAIL \
-#           --fullname=$DEPLOY_FULLNAME \
-#           --shortname=$DEPLOY_SHORTNAME
+echo_info "Instalar o Moodle AVA"
+./ava/run php \
+          admin/cli/install_database.php \
+          --agree-license \
+          --lang=DEPLOY_LANG \
+          --adminuser=$DEPLOY_ADMIN_USER \
+          --adminpass=$DEPLOY_ADMIN_PASS \
+          --adminemail=$DEPLOY_ADMIN_MAIL \
+          --fullname=$DEPLOY_FULLNAME \
+          --shortname=$DEPLOY_SHORTNAME
 
-# echo_info "Instalar o Moodle DEV"
-# ./dev_run php \
-#           admin/cli/install_database.php \
-#           --agree-license \
-#           --lang=DEPLOY_LANG \
-#           --adminuser=$DEPLOY_ADMIN_USER \
-#           --adminpass=$DEPLOY_ADMIN_PASS \
-#           --adminemail=$DEPLOY_ADMIN_MAIL \
-#           --fullname=DEV $DEPLOY_FULLNAME \
-#           --shortname=DEV $DEPLOY_SHORTNAME
+echo_info "Instalar o Moodle DEV"
+./dev/run php \
+          admin/cli/install_database.php \
+          --agree-license \
+          --lang=DEPLOY_LANG \
+          --adminuser=$DEPLOY_ADMIN_USER \
+          --adminpass=$DEPLOY_ADMIN_PASS \
+          --adminemail=$DEPLOY_ADMIN_MAIL \
+          --fullname=DEV $DEPLOY_FULLNAME \
+          --shortname=DEV $DEPLOY_SHORTNAME
 
 # echo_info "Parar o mundo novamente"
 # ./down

@@ -1,9 +1,36 @@
 [submodule "apps/theme_ledor"]
-	path = apps/theme_ledor
+	path = plugins/theme_ledor
 	url = git@github.com:CoticEaDIFRN/moodle_theme_ledor.git
 [submodule "apps/moodle"]
-	path = apps/moodle
+	path = apps/dev
 	url = git@github.com:CoticEaDIFRN/moodle.git
 [submodule "apps/ava"]
 	path = apps/ava
 	url = https://github.com/moodle/moodle.git
+[submodule "plugins/suap"]
+	path = plugins/mod_suap
+	url = git@github.com:CoticEaDIFRN/integrador_moodle_suap.git
+[submodule "plugins/auth_hashurl"]
+	path = plugins/auth_hashurl
+	url = git@github.com:CoticEaDIFRN/moodle_auth_hashurl.git
+[submodule "plugins/mod_mural"]
+	path = plugins/mod_mural
+	url = git@github.com:CoticEaDIFRN/moodle_mod_mural.git
+[submodule "plugins/mod_secretaria"]
+	path = plugins/mod_secretaria
+	url = git@github.com:CoticEaDIFRN/moodle_mod_secretaria.git
+[submodule "plugins/mod_fale_conosco"]
+	path = plugins/mod_fale_conosco
+	url = git@github.com:CoticEaDIFRN/moodle_mod_fale_conosco.git
+[submodule "plugins/theme_eadifrn"]
+	path = plugins/theme_eadifrn
+	url = git@github.com:CoticEaDIFRN/moodle_theme_eadifrn.git
+[submodule "plugins/eadifrn_with_blocks"]
+	path = plugins/theme_eadifrn_with_blocks
+	url = git@github.com:CoticEaDIFRN/moodle_theme_eadifrn_with_blocks.git
+[submodule "plugins/mod_mensagem"]
+	path = plugins/mod_mensagem
+	url = git@github.com:CoticEaDIFRN/moodle_mod_mensagem.git
+[submodule "plugins/mod_diarios"]
+	path = plugins/mod_diarios
+	url = git@github.com:CoticEaDIFRN/moodle_mod_diarios.git

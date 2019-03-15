@@ -20,9 +20,17 @@ services:
     volumes:
       - "${MOODLE_DOCKER_APACHE_CONFIG}/apache2_mailhog.conf:/etc/apache2/conf-enabled/apache2_mailhog.conf"
       - "${MOODLE_DOCKER_AVA_WWWROOT}:/var/www/html/ava"
-      - "${MOODLE_DOCKER_AVA_DATA}:/var/www/moodledata"
+      - "${MOODLE_DOCKER_AVA_DATA}:/var/moodledata"
       - "${MOODLE_DOCKER_AVA_CONFIG}:/var/www/html/ava/config.php"
-      - "../apps/theme_ledor:/var/www/html/ava/theme/ledor"
+      - "../plugins/theme_ledor:/var/www/html/ava/theme/ledor"
+      - "../plugins/theme_eadifrn:/var/www/html/ava/theme/eadifrn"
+      - "../plugins/theme_eadifrn_with_blocks:/var/www/html/ava/theme/eadifrn_with_blocks"
+      - "../plugins/mod_diarios:/var/www/html/ava/diarios"
+      - "../plugins/mod_fale_conosco:/var/www/html/ava/fale_conosco"
+      - "../plugins/mod_mensagem:/var/www/html/ava/mensagem"
+      - "../plugins/mod_mural:/var/www/html/ava/mural"
+      - "../plugins/mod_secretaria:/var/www/html/ava/secretaria"
+      - "../plugins/mod_suap:/var/www/html/ava/suap"
     working_dir: /var/www/html/ava/
     env_file:
       - .env
@@ -31,21 +39,26 @@ services:
   #   depends_on:
   #     - mailhog
 
-  dev:
-    image: "moodlehq/moodle-php-apache:7.1"
-    volumes:
-      - "${MOODLE_DOCKER_APACHE_CONFIG}/apache2_mailhog.conf:/etc/apache2/conf-enabled/apache2_mailhog.conf"
-      - "${MOODLE_DOCKER_DEV_WWWROOT}:/var/www/html/moodle"
-      - "${MOODLE_DOCKER_DEV_DATA}:/var/www/moodledatadev"
-      - "${MOODLE_DOCKER_DEV_CONFIG}:/var/www/html/dev/config.php"
-      - "../apps/theme_ledor:/var/www/html/dev/theme/ledor"
-    working_dir: /var/www/html/dev/
-    env_file:
-      - .env
-    ports:
-      - "${MOODLE_DOCKER_APACHE_PORT}:80"
-  #   depends_on:
-  #     - mailhog
+  # dev:
+  #   image: "moodlehq/moodle-php-apache:7.1"
+  #   volumes:
+  #     - "${MOODLE_DOCKER_APACHE_CONFIG}/apache2_mailhog.conf:/etc/apache2/conf-enabled/apache2_mailhog.conf"
+  #     - "${MOODLE_DOCKER_DEV_WWWROOT}:/var/www/html/dev"
+  #     - "${MOODLE_DOCKER_DEV_DATA}:/var/moodledata"
+  #     - "${MOODLE_DOCKER_DEV_CONFIG}:/var/www/html/dev/config.php"
+  #     - "../plugins/mod_diarios:/var/www/html/ava/diarios"
+  #     - "../plugins/mod_fale_conosco:/var/www/html/ava/fale_conosco"
+  #     - "../plugins/mod_mensagem:/var/www/html/ava/mensagem"
+  #     - "../plugins/mod_mural:/var/www/html/ava/mural"
+  #     - "../plugins/mod_secretaria:/var/www/html/ava/secretaria"
+  #     - "../plugins/mod_suap:/var/www/html/ava/suap"
+  #   working_dir: /var/www/html/dev/
+  #   env_file:
+  #     - .env
+  #   ports:
+  #     - "${MOODLE_DOCKER_DEV_APACHE_PORT}:80"
+  # #   depends_on:
+  # #     - mailhog
 
   # memcached:
   #   image: memcached:1.4
