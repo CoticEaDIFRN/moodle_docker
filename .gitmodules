@@ -31,3 +31,6 @@
 [submodule "plugins/mod_diarios"]
 	path = plugins/mod_diarios
 	url = git@github.com:CoticEaDIFRN/moodle_mod_diarios.git
+[submodule "mod_suap"]
+	path = plugins/mod_suap
+	url = git@github.com:CoticEaDIFRN/moodle_mod_suap.git
