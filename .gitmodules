@@ -1,9 +1,6 @@
 [submodule "apps/theme_ledor"]
 	path = plugins/theme_ledor
 	url = git@github.com:CoticEaDIFRN/moodle_theme_ledor.git
-[submodule "apps/moodle"]
-	path = apps/dev
-	url = git@github.com:CoticEaDIFRN/moodle.git
 [submodule "apps/ava"]
 	path = apps/ava
 	url = https://github.com/moodle/moodle.git
