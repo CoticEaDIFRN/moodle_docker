@@ -23,14 +23,14 @@ services:
       - "${MOODLE_DOCKER_AVA_DATA}:/var/moodledata"
       - "${MOODLE_DOCKER_AVA_CONFIG}:/var/www/html/ava/config.php"
       - "../plugins/theme_ledor:/var/www/html/ava/theme/ledor"
-      - "../plugins/theme_eadifrn:/var/www/html/ava/theme/eadifrn"
-      - "../plugins/theme_eadifrn_with_blocks:/var/www/html/ava/theme/eadifrn_with_blocks"
-      - "../plugins/mod_diarios:/var/www/html/ava/diarios"
-      - "../plugins/mod_fale_conosco:/var/www/html/ava/fale_conosco"
-      - "../plugins/mod_mensagem:/var/www/html/ava/mensagem"
-      - "../plugins/mod_mural:/var/www/html/ava/mural"
-      - "../plugins/mod_secretaria:/var/www/html/ava/secretaria"
-      - "../plugins/mod_suap:/var/www/html/ava/suap"
+      # - "../plugins/theme_eadifrn:/var/www/html/ava/theme/boost_eadifrn"
+      # - "../plugins/theme_eadifrn_with_blocks:/var/www/html/ava/theme/boost_eadifrn_with_blocks"
+      # - "../plugins/mod_diarios:/var/www/html/ava/diarios"
+      # - "../plugins/mod_fale_conosco:/var/www/html/ava/fale_conosco"
+      # - "../plugins/mod_mensagem:/var/www/html/ava/mensagem"
+      # - "../plugins/mod_mural:/var/www/html/ava/mural"
+      # - "../plugins/mod_secretaria:/var/www/html/ava/secretaria"
+      # - "../plugins/mod_suap:/var/www/html/ava/suap"
     working_dir: /var/www/html/ava/
     env_file:
       - .env
