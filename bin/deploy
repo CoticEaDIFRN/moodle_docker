@@ -24,8 +24,10 @@ echo_info "Instalar o Moodle AVA"
           --fullname=$DEPLOY_FULLNAME \
           --shortname=$DEPLOY_SHORTNAME
 
-# echo_info "Parar o mundo novamente"
-# ./down
+./ava/run chown -R www-data: /var/moodledata
+
+echo_info "Parar o mundo novamente"
+./restart
 
 # echo_success "Tudo pronto. Não esqueça de fazer um ./ava_up se quiser ver a aplicação"
 
